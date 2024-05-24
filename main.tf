@@ -1,6 +1,6 @@
 resource "spotify_playlist" "terrafy" {
   name        = "Terrafy"
-  description = ""
+  description = "Managed using Terraform (https://github.com/hknutsen/terrafy)"
   public      = true
 
   tracks = [
@@ -9,7 +9,7 @@ resource "spotify_playlist" "terrafy" {
 }
 
 data "spotify_track" "terrafy" {
-  for_each = toset(local.track_urls)
+  for_each = toset(yamldecode(file("config.yml")).track_urls)
 
   url = each.value
 }

@@ -3,9 +3,3 @@ variable "spotify_api_key" {
   type        = string
   sensitive   = true
 }
-
-locals {
-  track_urls = [
-    "https://open.spotify.com/track/63Ql2zSLiBryLRPihaUToK?si=64a194652176418c" # Starpoint - Object of My Desire
-  ]
-}
