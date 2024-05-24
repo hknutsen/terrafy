@@ -9,7 +9,7 @@ resource "spotify_playlist" "terrafy" {
 }
 
 data "spotify_track" "terrafy" {
-  for_each = local.track_urls
+  for_each = toset(local.track_urls)
 
   url = each.value
 }

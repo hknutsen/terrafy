@@ -5,7 +5,7 @@ variable "spotify_api_key" {
 }
 
 locals {
-  track_urls = {
-    "Starpoint - Object of My Desire" = "https://open.spotify.com/track/63Ql2zSLiBryLRPihaUToK?si=64a194652176418c"
-  }
+  track_urls = [
+    "https://open.spotify.com/track/63Ql2zSLiBryLRPihaUToK?si=64a194652176418c" # Starpoint - Object of My Desire
+  ]
 }
